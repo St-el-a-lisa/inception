@@ -2,6 +2,7 @@ services:
   mariadb:
     build: ./requirements/mariadb
     container_name: mariadb
+    image: mariadb
     restart: always
     env_file:
       - .env
@@ -12,19 +13,22 @@ services:
 
   wordpress:
     build: ./requirements/wordpress
+    container_name: wordpress
+    image: wordpress
     depends_on:
       - mariadb
     restart: always
     env_file:
       - .env
     volumes:
-      - wordpress_data:/var/www/html
+      - wordpress_data:/var/www/html 
     networks:
       - inception
 
   nginx:
     build: ./requirements/nginx
     container_name: nginx
+    image: nginx
     depends_on:
       - wordpress
     restart: always
@@ -42,3 +46,4 @@ volumes:
 networks:
   inception:
     driver: bridge
+
