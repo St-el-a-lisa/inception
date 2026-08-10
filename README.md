@@ -9,3 +9,6 @@ Docker Hub fournit des images déjà configurées.
 Avec Inception, on apprend comment construire une image nous-mêmes.
 On découvre les notions de Dockerfile, volumes, réseaux, variables d'environnement et persistance des données.
 On comprend mieux la différence entre une machine virtuelle et un conteneur.
+
+
+https://make.wordpress.org/cli/handbook/guides/installing/?utm_source=chatgpt.com
