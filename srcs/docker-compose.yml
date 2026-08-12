@@ -23,6 +23,8 @@ services:
     restart: always
     env_file:
       - .env
+    secrets:
+      - db_password
     volumes:
       - wordpress_data:/var/www/html 
     networks:

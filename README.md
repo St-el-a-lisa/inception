@@ -1,3 +1,37 @@
+*This project has been created as part of the 42 curriculum by ecid.*
+
+# Inception
+
+## Description
+- But du projet
+- Présentation de l'infrastructure
+- Utilisation de Docker
+- Sources utilisées
+- Principaux choix techniques
+
+### Virtual Machines vs Docker
+
+### Secrets vs Environment Variables
+
+### Docker Network vs Host Network
+
+### Docker Volumes vs Bind Mounts
+
+## Instructions
+- Prérequis
+- Installation
+- Configuration
+- Compilation
+- Lancement
+
+## Resources
+- Documentation Docker
+- Documentation Debian
+- Documentation MariaDB
+- Documentation WordPress / WP-CLI
+- Documentation NGINX
+- Grademe
+- Utilisation de l'IA
 J'ai choisi Debian Bookworm, car le sujet impose d'utiliser l'avant-dernière version stable de Debian. 
 
 
