@@ -32,6 +32,7 @@
 - Documentation NGINX
 - Grademe
 - Utilisation de l'IA
+
 J'ai choisi Debian Bookworm, car le sujet impose d'utiliser l'avant-dernière version stable de Debian. 
 
 
