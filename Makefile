@@ -1,14 +1,17 @@
 COMPOSE = docker compose -f srcs/docker-compose.yml
 
-DATA_DIR = /home/ecid/data
+DATA_PATH = /home/ecid/data
 
-all:
-	$(COMPOSE) up -d --build
+all: folders
+	DATA_PATH=$(DATA_PATH) $(COMPOSE) up -d --build
+
+folders:
+	mkdir -p $(DATA_PATH)/mariadb
+	mkdir -p $(DATA_PATH)/wordpress
 
 down:
-	$(COMPOSE) down
+	DATA_PATH=$(DATA_PATH) $(COMPOSE) down
 
-re: down
-	$(COMPOSE) up -d --build
+re: down all
 
-.PHONY: all done re
+.PHONY: all folders down re
