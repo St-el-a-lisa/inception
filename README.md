@@ -302,18 +302,6 @@ These resources were used to understand Docker images and containers, Docker net
 
 ## Use of AI
 
-AI tools were used as a learning and debugging assistant during the project.
+AI tools were used as a learning and debugging assistant during the project, mainly to clarify Docker concepts, understand configuration and error messages, and help with testing and reviewing the infrastructure against the project requirements.
 
-They were mainly used to:
-
-- Explain Docker and Docker Compose concepts.
-- Understand the differences between virtual machines and containers.
-- Explain Docker networks, volumes, environment variables and secrets.
-- Help understand NGINX, PHP-FPM and MariaDB configuration.
-- Analyze error messages during development.
-- Suggest commands for testing the infrastructure.
-- Review documentation and compare the implementation with the project requirements.
-
-AI-generated suggestions were checked against the project subject, documentation, practical tests and peer feedback before being kept in the project.
-
-The implementation and configuration were tested manually in the virtual machine.
+AI-generated suggestions were reviewed and tested before being used in the project.

@@ -409,3 +409,4 @@ curl -I http://localhost
 ```
 
 The connection should fail because NGINX is exposed through HTTPS port 443 only.
+
