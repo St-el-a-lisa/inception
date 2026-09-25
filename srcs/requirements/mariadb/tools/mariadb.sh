@@ -2,7 +2,7 @@
 
 set -e
 
-echo "Préparation de MariaDB..."
+echo "Preparing MariaDB..."
 
 DB_PASSWORD=$(cat /run/secrets/db_password)
 DB_ROOT_PASSWORD=$(cat /run/secrets/db_root_password)
@@ -12,7 +12,7 @@ chown -R mysql:mysql /run/mysqld
 chown -R mysql:mysql /var/lib/mysql
 
 if [ ! -d "/var/lib/mysql/mysql" ]; then
-    echo "Initialisation de MariaDB..."
+    echo "Initializing MariaDB..."
 
     mariadb-install-db \
         --user=mysql \
@@ -52,7 +52,7 @@ EOF
     wait "$pid"
 fi
 
-echo "Démarrage de MariaDB..."
+echo "Starting MariaDB..."
 
 exec mariadbd \
     --user=mysql \

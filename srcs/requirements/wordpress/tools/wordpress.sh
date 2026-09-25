@@ -2,7 +2,7 @@
 
 set -e
 
-echo "Préparation de WordPress..."
+echo "Preparing WordPress..."
 
 DB_PASSWORD=$(cat /run/secrets/db_password)
 . /run/secrets/credentials
@@ -14,11 +14,11 @@ until mariadb \
     -e "SELECT 1;" \
     "${MYSQL_DATABASE}" > /dev/null 2>&1
 do
-    echo "Attente de MariaDB..."
+    echo "Waiting for MariaDB..."
     sleep 1
 done
 
-echo "MariaDB est prête."
+echo "MariaDB is ready."
 
 if [ ! -f "/var/www/html/wp-config.php" ]; then
     wp core download --allow-root
@@ -49,6 +49,6 @@ if ! wp core is-installed --allow-root; then
         --allow-root
 fi
 
-echo "Démarrage de PHP-FPM..."
+echo "Starting PHP-FPM..."
 
 exec php-fpm8.2 -F
